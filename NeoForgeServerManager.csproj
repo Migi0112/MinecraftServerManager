@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <Version>1.12.29</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Assets/app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup><Compile Remove="tests\**\*.cs" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Assets\update-public.pem" /><EmbeddedResource Include="Assets\apply-update.ps1" /></ItemGroup>
+  <ItemGroup><Content Include="Assets\Fonts\*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Assets\landscape.png" /><EmbeddedResource Include="Assets\app-icon.png" /><EmbeddedResource Include="Assets\presets.png" /><EmbeddedResource Include="Assets\brand-reference.png" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Assets\paper.png;Assets\purpur.png;Assets\fabric.png;Assets\forge.png;Assets\neoforge.png" /></ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="3.119.2" />
+  </ItemGroup>
+</Project>
+
+
+
+
